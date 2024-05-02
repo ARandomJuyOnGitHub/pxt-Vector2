@@ -1,5 +1,5 @@
 {
-    "name": "Vector2 Playground 3.0",
+    "name": "Vector2 Extension",
     "description": "",
     "dependencies": {
         "device": "*",

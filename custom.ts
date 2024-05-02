@@ -143,7 +143,7 @@ namespace vectors {
             console.log(resulty)
             return new Vector2(resultx, resulty)
         }
-        
+
     }
 
     /**
