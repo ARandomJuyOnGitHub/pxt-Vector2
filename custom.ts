@@ -193,7 +193,7 @@ namespace vectors {
     }
 
     /**
-     * Rotates the vector by the inputed number of degrees. Will rotate the vector to the right if the number of degrees if positive, otherwise, will rotate the vector to the left.
+     * Rotates the vector by the inputed number of degrees. Will rotate the vector clockwise if the number of degrees is positive, otherwise, will rotate the vector counterclockwise.
      */
     //% block="rotate $vector2 by $angle degrees"
     //% angle.min=-360 angle.max=360
@@ -239,9 +239,16 @@ namespace vectors {
     //% secondVector.shadow="variables_get" secondVector.defl="secondVector"
     //% weight=97
     //% group="Methods"
-    export function angle(firstVector: Vector2, secondVector: Vector2, angleType: AngleTypes): number {
+    export function angle(firstVector: Vector2, secondVector: Vector2, angleType?: AngleTypes): number {
+        let choosenangletype
+        if (angleType == undefined){
+            choosenangletype = AngleTypes.Acute    
+        } else {
+            choosenangletype = angleType
+        }
+
         let acuteangle = __radiansToAngles(Math.acos(vectors.dot(firstVector, secondVector) / (vectors.magnitude(firstVector) * vectors.magnitude(secondVector))))
-        if (angleType == AngleTypes.Acute) {
+        if (choosenangletype == AngleTypes.Acute) {
             return acuteangle
         } else {
             return 360 - acuteangle

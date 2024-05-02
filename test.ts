@@ -1,1 +1,2 @@
-// tests go here; this will not be compiled when this package is used as an extension.
+// angle testing
+console.log(vectors.angle(vectors.create(0,1),vectors.create(1,0)))
