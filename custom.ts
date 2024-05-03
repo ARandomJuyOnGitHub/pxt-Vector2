@@ -95,8 +95,8 @@ namespace vectors {
      * @param secondvector the second addend of the equation
      */
     //% block="$firstvector + $secondvector"
-    //% firstvector.shadow="variables_get" firstvector.defl="1staddend"
-    //% secondvector.shadow="variables_get" secondvector.defl="2ndaddend"
+    //% firstvector.shadow="variables_get" firstvector.defl="firstaddend"
+    //% secondvector.shadow="variables_get" secondvector.defl="secondaddend"
     //% weight=106
     //% group="Math"
     export function add(firstvector: Vector2, secondvector: Vector2): Vector2 {
