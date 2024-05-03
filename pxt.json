@@ -2,8 +2,7 @@
     "name": "Vector2 Extension",
     "description": "",
     "dependencies": {
-        "device": "*",
-        "animation": "*"
+        "device": "*"
     },
     "files": [
         "main.blocks",
