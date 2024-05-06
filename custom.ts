@@ -65,7 +65,7 @@ namespace vectors {
     }
 
     /**
-     * Returns the magnitude of the inputed vector.
+     * Returns the magnitude of the inputted vector.
      */
     //% block="the magnitude of $vector2"
     //% vector2.shadow="variables_get" vector2.defl="vector2"
@@ -76,7 +76,7 @@ namespace vectors {
     }
 
     /**
-     * Returns the normal of the inputed vector.
+     * Returns the normal of the inputted vector.
      */
     //% block="the normal of $vector2"
     //% vector2.shadow="variables_get" vector2.defl="vector2"
@@ -88,6 +88,16 @@ namespace vectors {
         let resulty = vector2.y / magnitude
         return new Vector2(resultx, resulty)
     }
+    
+    /**
+         * Returns the value of the vector
+         */
+        //% block="the value of $vector2"
+        //% vector2.shadow="variables_get" vector2.defl="vector2"
+        //% group="Properties"
+        export function getValue(vector2: Vector2): object {
+            return { x: vector2.x, y: vector2.y }
+        }
 
     /**
      * Returns the sum of the two vectors.
@@ -193,7 +203,7 @@ namespace vectors {
     }
 
     /**
-     * Rotates the vector by the inputed number of degrees. Will rotate the vector clockwise if the number of degrees is positive, otherwise, will rotate the vector counterclockwise.
+     * Rotates the vector by the inputted number of degrees. Will rotate the vector clockwise if the number of degrees is positive, otherwise, will rotate the vector counterclockwise.
      */
     //% block="rotate $vector2 by $angle degrees"
     //% angle.min=-360 angle.max=360
@@ -268,7 +278,7 @@ namespace vectors {
     }
 
     /**
-     * Reflects the inputed vector across the unit vector
+     * Reflects the inputted vector across the unit vector
      */
     //% block="the reflection of $vector2 across $unitVector"
     //% vector2.shadow="variables_get" vector2.defl="vector2"
@@ -378,15 +388,7 @@ namespace vectors {
         firstvector.y = secondvector.y
     }
 
-    /**
-     * Returns the value of the vector
-     */
-    //% block="the value of $vector2"
-    //% vector2.shadow="variables_get" vector2.defl="vector2"
-    //% group="Properties"
-    export function getValue(vector2: Vector2): object {
-        return { x: vector2.x, y: vector2.y }
-    }
+    
 
     function __anglesToRadians(angle: number) {
         return angle * Math.PI / 180;
