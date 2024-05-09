@@ -224,7 +224,7 @@ namespace vectors {
                 break;
             case 180:
             case -180:
-                vectors.equate(vector2, vectors.multiply(vector2, -1))
+                vectors.equateto(vector2, vectors.multiply(vector2, -1))
                 break;
             case 360:
             case -360:
@@ -383,7 +383,7 @@ namespace vectors {
     //% firstvector.shadow="variables_get" firstvector.defl="firstVector"
     //% secondvector.shadow="variables_get" secondvector.defl="secondVector"
     //% group="Other"
-    export function equate(firstvector: Vector2, secondvector: Vector2): void {
+    export function equateto(firstvector: Vector2, secondvector: Vector2): void {
         firstvector.x = secondvector.x
         firstvector.y = secondvector.y
     }
