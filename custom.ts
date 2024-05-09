@@ -34,7 +34,7 @@ class Vector2 {
 }
 
 
-//% groups='["Create", "Properties", "Math", "Methods", "Sprite Related Methods", "Other"]'
+//% groups='["Create", "Properties", "Math", "Methods", "Sprite Related Methods", "Miscellaneous"]'
 //% weight=99 icon="\uf30c"
 namespace vectors {
     /**
@@ -354,7 +354,7 @@ namespace vectors {
     //% block="the distance between $firstVector and $secondVector"
     //% firstVector.shadow="variables_get" firstVector.defl="firstVector"
     //% secondVector.shadow="variables_get" secondVector.defl="secondVector"
-    //% group="Other"
+    //% group="Miscellaneous"
     export function distance(firstVector: Vector2, secondVector: Vector2): number {
         return Math.sqrt((Math.abs(secondVector.x - firstVector.x)) ** 2 + (Math.abs(secondVector.y - firstVector.y)) ** 2)
     }
@@ -365,7 +365,7 @@ namespace vectors {
     //% block="$firstvector = $secondvector"
     //% firstvector.shadow="variables_get" firstvector.defl="firstVector"
     //% secondvector.shadow="variables_get" secondvector.defl="secondVector"
-    //% group="Other"
+    //% group="Miscellaneous"
     export function isEqualto(firstvector: Vector2, secondvector: Vector2): boolean {
         if ((firstvector.x == secondvector.x) && (firstvector.y == secondvector.y)) {
             return true
@@ -382,7 +382,7 @@ namespace vectors {
     //% block="set $firstvector equal to $secondvector"
     //% firstvector.shadow="variables_get" firstvector.defl="firstVector"
     //% secondvector.shadow="variables_get" secondvector.defl="secondVector"
-    //% group="Other"
+    //% group="Miscellaneous"
     export function equateto(firstvector: Vector2, secondvector: Vector2): void {
         firstvector.x = secondvector.x
         firstvector.y = secondvector.y
