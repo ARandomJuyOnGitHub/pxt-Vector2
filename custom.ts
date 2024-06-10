@@ -88,16 +88,16 @@ namespace vectors {
         let resulty = vector2.y / magnitude
         return new Vector2(resultx, resulty)
     }
-    
+
     /**
          * Returns the value of the vector
          */
-        //% block="the value of $vector2"
-        //% vector2.shadow="variables_get" vector2.defl="vector2"
-        //% group="Properties"
-        export function getValue(vector2: Vector2): object {
-            return { x: vector2.x, y: vector2.y }
-        }
+    //% block="the value of $vector2"
+    //% vector2.shadow="variables_get" vector2.defl="vector2"
+    //% group="Properties"
+    export function getValue(vector2: Vector2): object {
+        return { x: vector2.x, y: vector2.y }
+    }
 
     /**
      * Returns the sum of the two vectors.
@@ -251,8 +251,8 @@ namespace vectors {
     //% group="Methods"
     export function angle(firstVector: Vector2, secondVector: Vector2, angleType?: AngleTypes): number {
         let choosenangletype
-        if (angleType == undefined){
-            choosenangletype = AngleTypes.Acute    
+        if (angleType == undefined) {
+            choosenangletype = AngleTypes.Acute
         } else {
             choosenangletype = angleType
         }
@@ -283,10 +283,47 @@ namespace vectors {
     //% block="the reflection of $vector2 across $unitVector"
     //% vector2.shadow="variables_get" vector2.defl="vector2"
     //% unitVector.shadow="variables_get" unitVector.defl="unitVector"
+    //% weight=95
     //% group="Methods"
     export function reflect(vector2: Vector2, unitVector: Vector2): Vector2 {
         const n = vectors.normal(unitVector)
         return vectors.subtract(vector2, vectors.multiply(n, 2 * vectors.dot(vector2, n)))
+    }
+
+    /**
+     * the linear interpolation between the two vector2
+     * @param p1 the starting point of the interpolation
+     * @param p2 the end point of the interpolation
+     * @param t the number that interpolates the two function. Called the alpha value when used for alpha blending
+     */
+    //% block="the linear interpolation of $p1 and $p2 with a interpolation value of $t"
+    //% p1.shadow="variables_get" p1.defl="point1"
+    //% p2.shadow="variables_get" p2.defl="point2"
+    //% weight=94
+    //% group="Methods"
+    export function lerp(p1: Vector2, p2: Vector2, t: number): Vector2 {
+        return vectors.create(
+            p1.x + (p2.x - p1.x) * t,
+            p1.y + (p2.y - p1.y) * t
+        )
+    }
+
+    /**
+     * the clamped linear interpolation between the two vector2. The interpolation value is clamped inbetween 0 and 1
+     * @param p1 the starting point of the interpolation
+     * @param p2 the end point of the interpolation
+     * @param t the number that interpolates the two function. Called the alpha value when used for alpha blending
+     */
+    //% block="the linear interpolation of $p1 and $p2 with a interpolation value of $t"
+    //% p1.shadow="variables_get" p1.defl="point1"
+    //% p2.shadow="variables_get" p2.defl="point2"
+    //% group="Methods"
+    export function clampedLerp(p1: Vector2, p2: Vector2, t: number): Vector2 {
+        t = Math.clamp(0, 1, t)
+        return vectors.create(
+            p1.x + (p2.x - p1.x) * t,
+            p1.y + (p2.y - p1.y) * t
+        )
     }
 
     /**
@@ -388,7 +425,7 @@ namespace vectors {
         firstvector.y = secondvector.y
     }
 
-    
+
 
     function __anglesToRadians(angle: number) {
         return angle * Math.PI / 180;
