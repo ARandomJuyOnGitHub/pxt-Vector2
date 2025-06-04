@@ -291,7 +291,7 @@ namespace vectors {
     }
 
     /**
-     * the linear interpolation between the two vector2
+     * the linear interpolation between the two vectors
      * @param p1 the starting point of the interpolation
      * @param p2 the end point of the interpolation
      * @param t the number that interpolates the two function. Called the alpha value when used for alpha blending
@@ -309,12 +309,12 @@ namespace vectors {
     }
 
     /**
-     * the clamped linear interpolation between the two vector2. The interpolation value is clamped inbetween 0 and 1
+     * the clamped linear interpolation between the two vectors. The interpolation value is clamped inbetween 0 and 1
      * @param p1 the starting point of the interpolation
      * @param p2 the end point of the interpolation
      * @param t the number that interpolates the two function. Called the alpha value when used for alpha blending
      */
-    //% block="the linear interpolation of $p1 and $p2 with a interpolation value of $t"
+    //% block="the clamped linear interpolation of $p1 and $p2 with a interpolation value of $t"
     //% p1.shadow="variables_get" p1.defl="point1"
     //% p2.shadow="variables_get" p2.defl="point2"
     //% group="Methods"
