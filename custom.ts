@@ -35,7 +35,7 @@ class Vector2 {
 
 
 //% groups='["Create", "Properties", "Math", "Methods", "Sprite Related Methods", "Miscellaneous"]'
-//% weight=99 icon="\uf30c"
+//% weight=50 icon="\uf30c"
 namespace vectors {
     /**
      * Creates a new vector.
